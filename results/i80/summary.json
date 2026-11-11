@@ -1,0 +1,592 @@
+{
+  "messages": {
+    "total": 677465,
+    "train": 189556,
+    "validation": 116950,
+    "test": 370959,
+    "attack": 31731
+  },
+  "vehicles": {
+    "test": 802,
+    "attackers": 66,
+    "near_attacker": 476
+  },
+  "road_x_m": [
+    -3.850351738258908,
+    31.09104149291729
+  ],
+  "rule_thresholds": {
+    "r_disp": 1.0,
+    "r_acc": 5.910000000001359,
+    "jerk": 46.06334999998683,
+    "r_lat": 1.0,
+    "off_road": 1.0,
+    "overlap": 99.0
+  },
+  "auc": {
+    "constant_position": {
+      "iforest": 0.9496573527647783,
+      "autoencoder": 0.968840410041633,
+      "rules_tpr": 0.1881660123387549
+    },
+    "constant_offset": {
+      "iforest": 0.5985666180270308,
+      "autoencoder": 0.580453331415226,
+      "rules_tpr": 0.0026395173453996985
+    },
+    "random_position": {
+      "iforest": 0.9903021013175293,
+      "autoencoder": 0.9995670841635829,
+      "rules_tpr": 1.0
+    },
+    "random_offset": {
+      "iforest": 0.9851040466059877,
+      "autoencoder": 0.9996038770607147,
+      "rules_tpr": 0.9872485123264381
+    },
+    "speed_high": {
+      "iforest": 0.9458286902730093,
+      "autoencoder": 0.9995552576204222,
+      "rules_tpr": 1.0
+    },
+    "accel_spoof": {
+      "iforest": 0.970535799740089,
+      "autoencoder": 0.9463545858123432,
+      "rules_tpr": 0.41259640102827766
+    },
+    "eventual_stop": {
+      "iforest": 0.998120527516661,
+      "autoencoder": 0.8682671386451912,
+      "rules_tpr": 0.0032733224222585926
+    },
+    "replay": {
+      "iforest": 0.777031894129899,
+      "autoencoder": 0.7075722588398832,
+      "rules_tpr": 0.1209902370990237
+    },
+    "drift": {
+      "iforest": 0.5208950338655495,
+      "autoencoder": 0.5189667385055128,
+      "rules_tpr": 0.0
+    },
+    "lane_shift": {
+      "iforest": 0.5720925246509494,
+      "autoencoder": 0.5350735416643149,
+      "rules_tpr": 0.0005359056806002144
+    }
+  },
+  "vehicle_level": {
+    "rules": {
+      "threshold": 0.6,
+      "validation_curve": [
+        [
+          0.5,
+          0.020527859237536656
+        ],
+        [
+          0.55,
+          0.020527859237536656
+        ],
+        [
+          0.6,
+          0.01466275659824047
+        ],
+        [
+          0.65,
+          0.01466275659824047
+        ],
+        [
+          0.7,
+          0.011730205278592375
+        ],
+        [
+          0.75,
+          0.011730205278592375
+        ],
+        [
+          0.8,
+          0.008797653958944282
+        ],
+        [
+          0.85,
+          0.002932551319648094
+        ],
+        [
+          0.9,
+          0.002932551319648094
+        ],
+        [
+          0.95,
+          0.0
+        ]
+      ],
+      "attacks": {
+        "constant_position": {
+          "n": 7,
+          "detected": 0.7142857142857143,
+          "median_ttd_s": 0.4000000000000341
+        },
+        "constant_offset": {
+          "n": 7,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "random_position": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.2999999999999545
+        },
+        "random_offset": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.30000000000001137
+        },
+        "speed_high": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.30000000000001137
+        },
+        "accel_spoof": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 1.8000000000000114
+        },
+        "eventual_stop": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "replay": {
+          "n": 6,
+          "detected": 0.16666666666666666,
+          "median_ttd_s": 27.69999999999999
+        },
+        "drift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "lane_shift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        }
+      },
+      "benign_vehicles_flagged": 0.043478260869565216,
+      "benign_not_near_attacker_flagged": 0.023076923076923078,
+      "benign_message_alert_rate": 0.000646408577663915,
+      "attack_message_alert_rate": 0.4015001103022281
+    },
+    "iforest": {
+      "threshold": 0.6,
+      "validation_curve": [
+        [
+          0.5,
+          0.020527859237536656
+        ],
+        [
+          0.55,
+          0.020527859237536656
+        ],
+        [
+          0.6,
+          0.017595307917888565
+        ],
+        [
+          0.65,
+          0.01466275659824047
+        ],
+        [
+          0.7,
+          0.011730205278592375
+        ],
+        [
+          0.75,
+          0.011730205278592375
+        ],
+        [
+          0.8,
+          0.005865102639296188
+        ],
+        [
+          0.85,
+          0.005865102639296188
+        ],
+        [
+          0.9,
+          0.002932551319648094
+        ],
+        [
+          0.95,
+          0.0
+        ]
+      ],
+      "attacks": {
+        "constant_position": {
+          "n": 7,
+          "detected": 0.2857142857142857,
+          "median_ttd_s": 2.049999999999983
+        },
+        "constant_offset": {
+          "n": 7,
+          "detected": 0.14285714285714285,
+          "median_ttd_s": 0.2999999999999545
+        },
+        "random_position": {
+          "n": 7,
+          "detected": 0.7142857142857143,
+          "median_ttd_s": 1.099999999999966
+        },
+        "random_offset": {
+          "n": 7,
+          "detected": 0.8571428571428571,
+          "median_ttd_s": 2.9499999999999886
+        },
+        "speed_high": {
+          "n": 7,
+          "detected": 0.5714285714285714,
+          "median_ttd_s": 5.300000000000011
+        },
+        "accel_spoof": {
+          "n": 7,
+          "detected": 0.8571428571428571,
+          "median_ttd_s": 14.299999999999983
+        },
+        "eventual_stop": {
+          "n": 6,
+          "detected": 1.0,
+          "median_ttd_s": 0.75
+        },
+        "replay": {
+          "n": 6,
+          "detected": 0.6666666666666666,
+          "median_ttd_s": 10.849999999999994
+        },
+        "drift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "lane_shift": {
+          "n": 6,
+          "detected": 0.16666666666666666,
+          "median_ttd_s": 35.400000000000034
+        }
+      },
+      "benign_vehicles_flagged": 0.09239130434782608,
+      "benign_not_near_attacker_flagged": 0.038461538461538464,
+      "benign_message_alert_rate": 0.0018977132555270898,
+      "attack_message_alert_rate": 0.0865714916012732
+    },
+    "autoencoder": {
+      "threshold": 0.85,
+      "validation_curve": [
+        [
+          0.5,
+          0.04398826979472141
+        ],
+        [
+          0.55,
+          0.04398826979472141
+        ],
+        [
+          0.6,
+          0.03812316715542522
+        ],
+        [
+          0.65,
+          0.03519061583577713
+        ],
+        [
+          0.7,
+          0.02932551319648094
+        ],
+        [
+          0.75,
+          0.02932551319648094
+        ],
+        [
+          0.8,
+          0.02346041055718475
+        ],
+        [
+          0.85,
+          0.017595307917888565
+        ],
+        [
+          0.9,
+          0.008797653958944282
+        ],
+        [
+          0.95,
+          0.002932551319648094
+        ]
+      ],
+      "attacks": {
+        "constant_position": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.6999999999999886
+        },
+        "constant_offset": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "random_position": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "random_offset": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "speed_high": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "accel_spoof": {
+          "n": 7,
+          "detected": 0.5714285714285714,
+          "median_ttd_s": 1.8000000000000114
+        },
+        "eventual_stop": {
+          "n": 6,
+          "detected": 1.0,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "replay": {
+          "n": 6,
+          "detected": 1.0,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "drift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "lane_shift": {
+          "n": 6,
+          "detected": 0.16666666666666666,
+          "median_ttd_s": 12.5
+        }
+      },
+      "benign_vehicles_flagged": 0.07880434782608696,
+      "benign_not_near_attacker_flagged": 0.03461538461538462,
+      "benign_message_alert_rate": 0.001263165385710219,
+      "attack_message_alert_rate": 0.477545617850052
+    },
+    "rules+iforest": {
+      "threshold": 0.8,
+      "validation_curve": [
+        [
+          0.5,
+          0.03519061583577713
+        ],
+        [
+          0.55,
+          0.03519061583577713
+        ],
+        [
+          0.6,
+          0.02932551319648094
+        ],
+        [
+          0.65,
+          0.026392961876832845
+        ],
+        [
+          0.7,
+          0.020527859237536656
+        ],
+        [
+          0.75,
+          0.020527859237536656
+        ],
+        [
+          0.8,
+          0.01466275659824047
+        ],
+        [
+          0.85,
+          0.008797653958944282
+        ],
+        [
+          0.9,
+          0.005865102639296188
+        ],
+        [
+          0.95,
+          0.0
+        ]
+      ],
+      "attacks": {
+        "constant_position": {
+          "n": 7,
+          "detected": 0.8571428571428571,
+          "median_ttd_s": 0.6000000000000227
+        },
+        "constant_offset": {
+          "n": 7,
+          "detected": 0.14285714285714285,
+          "median_ttd_s": 0.5
+        },
+        "random_position": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.5
+        },
+        "random_offset": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.5
+        },
+        "speed_high": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.5
+        },
+        "accel_spoof": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 3.6000000000000227
+        },
+        "eventual_stop": {
+          "n": 6,
+          "detected": 1.0,
+          "median_ttd_s": 1.450000000000017
+        },
+        "replay": {
+          "n": 6,
+          "detected": 0.6666666666666666,
+          "median_ttd_s": 11.049999999999983
+        },
+        "drift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "lane_shift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        }
+      },
+      "benign_vehicles_flagged": 0.08288043478260869,
+      "benign_not_near_attacker_flagged": 0.038461538461538464,
+      "benign_message_alert_rate": 0.0014529367112629283,
+      "attack_message_alert_rate": 0.43421259966594183
+    },
+    "all": {
+      "threshold": 0.9,
+      "validation_curve": [
+        [
+          0.5,
+          0.06451612903225806
+        ],
+        [
+          0.55,
+          0.06451612903225806
+        ],
+        [
+          0.6,
+          0.06451612903225806
+        ],
+        [
+          0.65,
+          0.06158357771260997
+        ],
+        [
+          0.7,
+          0.0469208211143695
+        ],
+        [
+          0.75,
+          0.0469208211143695
+        ],
+        [
+          0.8,
+          0.03225806451612903
+        ],
+        [
+          0.85,
+          0.026392961876832845
+        ],
+        [
+          0.9,
+          0.01466275659824047
+        ],
+        [
+          0.95,
+          0.005865102639296188
+        ]
+      ],
+      "attacks": {
+        "constant_position": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.8999999999999773
+        },
+        "constant_offset": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.8000000000000114
+        },
+        "random_position": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.7999999999999545
+        },
+        "random_offset": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.8000000000000114
+        },
+        "speed_high": {
+          "n": 7,
+          "detected": 1.0,
+          "median_ttd_s": 0.8000000000000114
+        },
+        "accel_spoof": {
+          "n": 7,
+          "detected": 0.8571428571428571,
+          "median_ttd_s": 7.299999999999983
+        },
+        "eventual_stop": {
+          "n": 6,
+          "detected": 1.0,
+          "median_ttd_s": 0.8000000000000114
+        },
+        "replay": {
+          "n": 6,
+          "detected": 1.0,
+          "median_ttd_s": 0.8000000000000114
+        },
+        "drift": {
+          "n": 6,
+          "detected": 0.0,
+          "median_ttd_s": null
+        },
+        "lane_shift": {
+          "n": 6,
+          "detected": 0.16666666666666666,
+          "median_ttd_s": 12.700000000000045
+        }
+      },
+      "benign_vehicles_flagged": 0.10190217391304347,
+      "benign_not_near_attacker_flagged": 0.046153846153846156,
+      "benign_message_alert_rate": 0.0018384097162918683,
+      "attack_message_alert_rate": 0.5235889193533138
+    }
+  },
+  "throughput": {
+    "features_msgs_per_s": 27675.779036016134,
+    "scoring_msgs_per_s": 53464.36654356036,
+    "bytes": 37,
+    "encode_us": 18.145260000164853,
+    "decode_us": 16.29892999990261
+  }
+}
